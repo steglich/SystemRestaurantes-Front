@@ -1,0 +1,19 @@
+<div class="container-fluid"> 
+    <br><br>
+<p><b>Restaurantes cadastrados:</b></p>
+<br><br>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Restaurante</th>
+        <th scope="col">Detalhes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let restaurante of restaurante.restaurantes">
+        <td>{{restaurante.nome}}</td>
+        <td><button type="button" class="btn btn-outline-dark"  (click)="details(restaurante.nome)">Detalhes</button></td>
+      </tr>
+    </tbody>
+</table>
+</div>

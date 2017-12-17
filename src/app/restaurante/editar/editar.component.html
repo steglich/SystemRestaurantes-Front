@@ -1,0 +1,114 @@
+<div class="container-fluid">
+  <br>
+  <br>
+  <p>
+    <b>Editar Restaurante:</b>
+  </p>
+  <br>
+  <br>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="container" id="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom01">Restaurante</label>
+        <input type="text" class="form-control" id="validationCustom01" name="nome" [(ngModel)]="restauranteEdit.nome" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">Rua</label>
+        <input type="text" class="form-control" id="validationCustom03" name="rua" [(ngModel)]="restauranteEdit.rua" required>
+        <div class="invalid-feedback">
+          Campo Inválido.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom04">Bairro</label>
+        <input type="text" class="form-control" id="validationCustom04" name="bairro" [(ngModel)]="restauranteEdit.bairro" required>
+        <div class="invalid-feedback">
+          Campo Inválido.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05">Número</label>
+        <input type="text" class="form-control" id="validationCustom05" name="numero" [(ngModel)]="restauranteEdit.numero" required>
+        <div class="invalid-feedback">
+          Campo Inválido.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Salvar</button>
+  </form>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+
+      window.addEventListener('load', function () {
+        var form = document.getElementById('needs-validation');
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      }, false);
+    })();
+  </script>
+
+</div>
+
+<!-- <form class="container" id="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom01">Restaurante</label>
+        <input type="text" [value]="restauranteEdit.nome" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">Rua</label>
+        <input type="text" [value]="restauranteEdit.rua" class="form-control" id="validationCustom03" placeholder="City" required>
+        <div class="invalid-feedback">
+          Campo Inválido.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom04">Bairro</label>
+        <input type="text" [value]="restauranteEdit.bairro" class="form-control" id="validationCustom04" placeholder="State" required>
+        <div class="invalid-feedback">
+            Campo Inválido.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05">Número</label>
+        <input type="text" [value]="restauranteEdit.numero" class="form-control" id="validationCustom05" placeholder="Zip" required>
+        <div class="invalid-feedback">
+            Campo Inválido.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Salvar</button>
+  </form>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+
+      window.addEventListener('load', function () {
+        var form = document.getElementById('needs-validation');
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      }, false);
+    })();
+  </script>
+
+</div> -->
