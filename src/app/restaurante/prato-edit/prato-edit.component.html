@@ -1,26 +1,20 @@
 <div class="container-fluid">
     <br><br>
-    <p><b>Cadastrar Pratos:</b></p>
+    <p><b>Editar Pratos:</b></p>
     <br><br>
 
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="container" id="needs-validation" novalidate>
     <div class="row">
       <div class="col-md-6 mb-3">
-        <label for="validationCustom01">Restaurante</label>
-        <input type="text" name="restaurant" class="form-control" id="validationCustom01" [(ngModel)]="restaurant.nome" required>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 mb-3">
         <label for="validationCustom03">Prato</label>
-        <input type="text" class="form-control" id="validationCustom03" name="nome" ngModel required>
+        <input type="text" class="form-control" id="validationCustom03" name="nome" [(ngModel)]="prato.nome" required>
         <div class="invalid-feedback">
           Campo Inválido.
         </div>
       </div>
       <div class="col-md-3 mb-3">
         <label for="validationCustom04">Preço</label>
-        <input type="text" class="form-control" id="validationCustom04" name="preco" ngModel required>
+        <input type="text" class="form-control" id="validationCustom04" name="preco" [(ngModel)]="prato.preco" required>
         <div class="invalid-feedback">
             Campo Inválido.
         </div>

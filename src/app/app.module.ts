@@ -14,6 +14,8 @@ import { EditarComponent } from './restaurante/editar/editar.component';
 import { SalvarComponent } from './restaurante/salvar/salvar.component';
 import { Pesquisa } from './restaurante/restaurante.pipes';
 import { PratoCadComponent } from './restaurante/prato-cad/prato-cad.component';
+import { PratoEditComponent } from './restaurante/prato-edit/prato-edit.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { PratoCadComponent } from './restaurante/prato-cad/prato-cad.component';
     EditarComponent,
     SalvarComponent,
     Pesquisa,
-    PratoCadComponent
+    PratoCadComponent,
+    PratoEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

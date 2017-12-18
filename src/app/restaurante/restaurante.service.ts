@@ -17,6 +17,7 @@ export class RestauranteService {
     restauranteNome: string;
     restauranteEdit: string;
     restauranteSave: any;
+    restaurant: any;
 
     constructor(public http: Http) {
         this.headers = new Headers({
@@ -113,4 +114,41 @@ export class RestauranteService {
     });
     }
 
+
+    pratoCreate(restauranteEdit) {
+        return new Promise((resolve, reject) => {
+          const data = {
+            nome: restauranteEdit.nome,
+            preco: restauranteEdit.preco,
+            restaurante: restauranteEdit.restaurant
+          };
+
+          this.http.post(this.apiUrl + 'pratos/create', data)
+            .subscribe((result: any) => {
+              resolve(result.json());
+            },
+            (error) => {
+              reject(error.json());
+            });
+        });
+      }
+
+
+    pratoUpdate(restauranteEdit) {
+    return new Promise((resolve, reject) => {
+        const data = {
+        id: restauranteEdit.pratoId,
+        nome: restauranteEdit.nome,
+        preco: restauranteEdit.preco
+        };
+
+        this.http.put(this.apiUrl + 'pratos/update', data)
+        .subscribe((result: any) => {
+            resolve(result.json());
+        },
+        (error) => {
+            reject(error.json());
+        });
+    });
+    }
 }

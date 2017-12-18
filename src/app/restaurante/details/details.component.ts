@@ -61,7 +61,7 @@ export class DetailsComponent implements OnInit {
     // this.restaurante.restaurantesAll();
     this.restaurante.pratos = prato;
     console.log(this.restaurante.pratos);
-    // this.router.navigateByUrl('/restaurante/editar');
+    this.router.navigateByUrl('/restaurante/pratoEdit');
   }
 
   getOnePrato(nome: string) {
@@ -78,7 +78,8 @@ export class DetailsComponent implements OnInit {
       });
   }
 
-  pratoCad() {
+  pratoCad(restauranteNome) {
+    this.restaurante.restaurant = restauranteNome;
     this.router.navigateByUrl('/restaurante/cadastrarPrato');
   }
 
