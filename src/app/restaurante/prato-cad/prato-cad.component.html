@@ -7,7 +7,15 @@
     <div class="row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom01">Restaurante</label>
-        <input type="text" name="restaurant" class="form-control" id="validationCustom01" [(ngModel)]="restaurant.nome" required>
+        <!-- <input type="text" name="restaurant" class="form-control" id="validationCustom01" [(ngModel)]="restaurant.nome" required> -->
+        <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td name="restaurant" [(ngModel)]="restaurant.nome">{{restaurant.nome}}</td>
+              </tr>
+            </tbody>
+          </table>
+      
       </div>
     </div>
     <div class="row">
