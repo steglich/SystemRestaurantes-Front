@@ -22,6 +22,11 @@ export class RestauranteComponent implements OnInit {
     this.restaurante.restaurantesAll();
   }
 
+  refresh() {
+    location.reload();
+    this.restaurante.restaurantesAll();
+  }
+
   details(restaurante) {
     // this.restaurante.restauranteNome = this.campoValoImput.nativeElement.value;
     this.restaurante.restauranteNome = restaurante;

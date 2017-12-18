@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { browser } from 'protractor';
+import { URLSearchParams } from '@angular/http';
+import { Location } from '@angular/common';
+import { routing } from './../../app.routes';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 
 import { RestauranteService } from './../restaurante.service';
@@ -25,6 +29,7 @@ export class SalvarComponent implements OnInit {
   onSubmit(form) {
     console.log(form);
     this.restaurante.restauranteCreate(form.value);
+    this.restaurante.restaurantesAll();
     this.router.navigateByUrl('/restaurante');
   }
 

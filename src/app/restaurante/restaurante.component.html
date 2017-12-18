@@ -1,8 +1,10 @@
 <div class="container-fluid"> 
     <br><br>
 <p><b>Restaurantes cadastrados:</b></p>
-<br><br>
-<table class="table">
+<br>
+<input #textoProcurado (keyup)="0" class="form-control form-control-lg" type="text" placeholder="Pesquisar ">
+<br>
+<table class="table" (keyup)="refresh()">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Restaurante</th>
@@ -10,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let restaurante of restaurante.restaurantes">
+      <tr *ngFor="let restaurante of restaurante.restaurantes | pesquisa: textoProcurado.value">
         <td>{{restaurante.nome}}</td>
         <td><button type="button" class="btn btn-outline-dark"  (click)="details(restaurante.nome)">Detalhes</button></td>
       </tr>

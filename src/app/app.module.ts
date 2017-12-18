@@ -12,6 +12,7 @@ import { RestauranteService } from './restaurante/restaurante.service';
 import { DetailsComponent } from './restaurante/details/details.component';
 import { EditarComponent } from './restaurante/editar/editar.component';
 import { SalvarComponent } from './restaurante/salvar/salvar.component';
+import { Pesquisa } from './restaurante/restaurante.pipes';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SalvarComponent } from './restaurante/salvar/salvar.component';
     RestauranteComponent,
     DetailsComponent,
     EditarComponent,
-    SalvarComponent
+    SalvarComponent,
+    Pesquisa
   ],
   imports: [
     BrowserModule,
