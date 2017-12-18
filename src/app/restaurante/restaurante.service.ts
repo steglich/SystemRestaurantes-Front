@@ -67,6 +67,12 @@ export class RestauranteService {
         .map(res => res.json());
     }
 
+    pratoDelete(pratos) {
+
+        return this.http.delete(this.apiUrl + 'pratos/deleta/' + pratos.nome)
+        .map(res => res.json());
+    }
+
     restauranteCreate(restauranteEdit) {
         return new Promise((resolve, reject) => {
           const data = {

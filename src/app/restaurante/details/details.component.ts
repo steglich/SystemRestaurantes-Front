@@ -22,6 +22,7 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.pratos);
   }
 
   ngondestroy() {
@@ -38,6 +39,12 @@ export class DetailsComponent implements OnInit {
     // this.router.navigate.apply('/restaurante');
   }
 
+  deletePrato(prato) {
+    this.restaurante.pratoDelete(prato)
+    .subscribe(null);
+    this.getOnePrato(this.restaurante.restauranteNome);
+  }
+
   editar(restauranteNome) {
     // this.restaurante.restauranteDelete(restauranteNome)
     // .subscribe(null);
@@ -45,6 +52,16 @@ export class DetailsComponent implements OnInit {
     // this.restaurante.restaurantesAll();
     this.restaurante.restauranteEdit = restauranteNome;
     this.router.navigateByUrl('/restaurante/editar');
+  }
+
+  editarPrato(prato) {
+    // this.restaurante.restauranteDelete(restauranteNome)
+    // .subscribe(null);
+    // console.log(restauranteNome);
+    // this.restaurante.restaurantesAll();
+    this.restaurante.pratos = prato;
+    console.log(this.restaurante.pratos);
+    // this.router.navigateByUrl('/restaurante/editar');
   }
 
   getOnePrato(nome: string) {
@@ -59,6 +76,10 @@ export class DetailsComponent implements OnInit {
       .then((result: any) => {
         this.restauranteNome = result;
       });
+  }
+
+  pratoCad() {
+    this.router.navigateByUrl('/restaurante/cadastrarPrato');
   }
 
 }

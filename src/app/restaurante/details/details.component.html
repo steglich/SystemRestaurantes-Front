@@ -24,6 +24,9 @@
         <td>
           <button type="button" class="btn btn-outline-dark" (click)="delete(restauranteNome)">Excluir</button>
         </td>
+        <td>
+          <button type="button" class="btn btn-outline-dark" (click)="pratoCad(restauranteNome)">Novo Prato</button>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -43,10 +46,10 @@
         <td>{{prato.nome}}</td>
         <td>{{prato.preco}}</td>
         <td>
-          <button type="button" class="btn btn-outline-dark" (click)="editar(restauranteNome)">Editar</button>
+          <button type="button" class="btn btn-outline-dark" (click)="editarPrato(prato)">Editar</button>
         </td>
         <td>
-          <button type="button" class="btn btn-outline-dark" (click)="delete(restauranteNome)">Excluir</button>
+          <button type="button" class="btn btn-outline-dark" (click)="deletePrato(prato)">Excluir</button>
         </td>
       </tr>
     </tbody>

@@ -13,6 +13,7 @@ import { DetailsComponent } from './restaurante/details/details.component';
 import { EditarComponent } from './restaurante/editar/editar.component';
 import { SalvarComponent } from './restaurante/salvar/salvar.component';
 import { Pesquisa } from './restaurante/restaurante.pipes';
+import { PratoCadComponent } from './restaurante/prato-cad/prato-cad.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { Pesquisa } from './restaurante/restaurante.pipes';
     DetailsComponent,
     EditarComponent,
     SalvarComponent,
-    Pesquisa
+    Pesquisa,
+    PratoCadComponent
   ],
   imports: [
     BrowserModule,
